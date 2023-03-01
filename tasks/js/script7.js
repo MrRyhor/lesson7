@@ -15,9 +15,9 @@ function getImage(randomImage) {
     return result
 }
 alert('Вывести рандомное изображение?')
-const img1 = `<img src = "/tasks/img/pear_1.jpg" >`
+const img1 = `<img src = '/tasks/img/pear_1.jpg'>`
 const img2 = `<img src = '/tasks/img/strawberry_2.jpg'>`
-const img3 = `<img src = '/tasks/img/banana_3.jpg>`
+const img3 = `<img src = '/tasks/img/apple_3.jpg'>`
 const img4 = `<img src = '/tasks/img/lemon_4.jpg'>`
 
 const minNumImage = 1,
