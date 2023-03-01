@@ -15,10 +15,10 @@ function getImage(randomImage) {
     return result
 }
 alert('Вывести рандомное изображение?')
-const img1 = `<img src = '/img/pear_1.jpg'>`
-const img2 = `<img src = '/img/strawberry_2.jpg'>`
-const img3 = `<img src = '/img/apple_3.jpg'>`
-const img4 = `<img src = '/img/lemon_4.jpg'>`
+const img1 = `<img src = '../img/pear_1.jpg'>`
+const img2 = `<img src = '../img/strawberry_2.jpg'>`
+const img3 = `<img src = '../img/apple_3.jpg'>`
+const img4 = `<img src = '../img/lemon_4.jpg'>`
 
 const minNumImage = 1,
     maxNumImage = 4
