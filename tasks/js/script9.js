@@ -1,12 +1,10 @@
-function getNegativeTemperature() {
-    for (let i = 0; i < 10; i++) {
-        enterTemperature = parseInt(prompt(`Введите показатели температуры за 10 дней. День ${i + 1}:`))
-        if (enterTemperature < 0) sumNegativeTemperatures += 1
+function getNegativeTemperature(...temperature) {
+    for (let i = 0; i < temperature.length; i++) {
+        if (temperature[i] < 0) countNegativesTemperatures++
     }
-    return sumNegativeTemperatures
+    return countNegativesTemperatures
 }
 
-let enterTemperature,
-    sumNegativeTemperatures = 0
+countNegativesTemperatures = 0
 
-result1.innerHTML = `Кол-во дней с минусовой температурой = ${getNegativeTemperature()}`
+result1.innerHTML = `Сумма дней с минусовой температурой = <span>${getNegativeTemperature(-1, 2, 1, -2, 4, 0, -1, 0)}</span>`

@@ -1,8 +1,7 @@
-function getAveragePositiveTemperatures() {
-    for (let i = 0; i < 10; i++) {
-        enterTemperature = parseInt(prompt(`Введите показатели температуры за 10 дней. День ${i + 1}:`))
-        if (enterTemperature > 0) {
-            sumPositiveTemperatures += enterTemperature
+function getAveragePositiveTemperatures(...temperature) {
+    for (let i = 0; i < temperature.length; i++) {
+        if (temperature[i] > 0) {
+            sumPositiveTemperatures += temperature[i]
             counterPositiveTempDay++
         }
         averagePositiveTemperature = sumPositiveTemperatures / counterPositiveTempDay
@@ -10,9 +9,8 @@ function getAveragePositiveTemperatures() {
     return [`Средняя плюсовая температура = <span>${averagePositiveTemperature}</span> град. За <span>${counterPositiveTempDay}</span> дней`]
 }
 
-let enterTemperature,
-    averagePositiveTemperature,
+let averagePositiveTemperature,
     sumPositiveTemperatures = 0,
     counterPositiveTempDay = 0
 
-result1.innerHTML = getAveragePositiveTemperatures()
+result1.innerHTML = getAveragePositiveTemperatures(-1, 0, 2, 1, 2, 0, -1, 2, 0, -1, 3, 2)
